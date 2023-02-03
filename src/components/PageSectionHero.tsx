@@ -21,7 +21,7 @@ const PageSectionHero: FC<PageSectionHeroProps> = ({ className, content }) => {
     <ThemeProvider theme={darkTheme}>
       <HeroSection className={className}>
         <PageContainer>
-          <ContentWrapper>
+          <ContentWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <Contents>
               <a href={content.soundcloud}>
                 <Image src={Logotype} alt={content.title} />
