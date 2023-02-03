@@ -1,5 +1,5 @@
 // Created as a separate script to avoid inline scripts due to CSP
-if (window.location.host === 'fetam.in') {
+if (window.location.host.endsWith('fetam.in')) {
   const s = document.createElement(`script`)
   s.setAttribute('type', 'text/javascript')
   s.setAttribute('async', '')
