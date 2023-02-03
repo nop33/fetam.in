@@ -14,7 +14,7 @@ module.exports = {
         name: `DJ Fetamin`,
         short_name: `Fetamin`,
         start_url: `/`,
-        icon: 'src/images/fetamin-round.png',
+        icon: 'src/images/fetamin-logo-white-square.png',
         icons: []
       }
     },
