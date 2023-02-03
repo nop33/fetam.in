@@ -4,6 +4,6 @@ if (window.location.host === 'fetam.in') {
   s.setAttribute('type', 'text/javascript')
   s.setAttribute('async', '')
   s.setAttribute('src', 'https://gc.zgo.at/count.js')
-  s.setAttribute('data-goatcounter', 'https://featmin.goatcounter.com/count')
+  s.setAttribute('data-goatcounter', 'https://fetamin.goatcounter.com/count')
   document.body.appendChild(s)
 }
