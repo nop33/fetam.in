@@ -154,6 +154,10 @@ const PageContainer = styled(motion.div)`
   flex-direction: column;
   flex: 1;
   height: auto;
+
+  @media ${deviceBreakPoints.ipad} {
+    padding: 0 25px;
+  }
 `
 
 const DjSetStyled = styled(DjSet)`
