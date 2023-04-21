@@ -96,7 +96,7 @@ const PageSectionDjSets = () => {
         </PageContainer>
         <PageContainer>
           <SideBySide>
-            <SectionTitle>b2b's</SectionTitle>
+            <SectionTitle>b2b&apos;s</SectionTitle>
 
             <MainContent>
               {b2bs.map((djSet) => (

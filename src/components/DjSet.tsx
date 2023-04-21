@@ -30,7 +30,7 @@ const DjSet = ({ title, genre, trackId, link, className }: DjSetProps) => {
       }}
       viewport={{
         once: true,
-        amount: 1
+        amount: 0.5
       }}
     >
       <ExternalLink link={link}>
