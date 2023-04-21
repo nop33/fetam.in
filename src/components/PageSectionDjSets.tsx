@@ -1,7 +1,7 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
+import { deviceBreakPoints } from '../styles/global-style'
 import DjSet, { DjSetType } from './DjSet'
 
 const djSets: DjSetType[] = [
@@ -49,44 +49,68 @@ const djSets: DjSetType[] = [
   }
 ]
 
-const PageSectionDjSets = () => {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-
-  const [sectionHeight, setSectionHeight] = useState(0)
-  const [titleHeight, setTitleHeight] = useState(92)
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: [`start end`, 'end start']
-  })
-
-  useEffect(() => {
-    if (sectionRef.current && titleRef.current) {
-      setSectionHeight(sectionRef.current.getBoundingClientRect().height)
-      setTitleHeight(titleRef.current.getBoundingClientRect().height)
-    }
-  }, [])
-
-  const titleStyle = {
-    y: useTransform(scrollYProgress, (value) => {
-      const distanceFromTopOfSection = value * sectionHeight
-
-      return distanceFromTopOfSection <= titleHeight ? 0 : distanceFromTopOfSection - titleHeight
-    })
+const b2bs: DjSetType[] = [
+  {
+    title: 'Fetamin b2b Sasha Gummy - Summer Solstice Festival 2022 - Thursday 8pm',
+    genre: 'Indie Dance',
+    trackId: '1302867535',
+    link: 'https://soundcloud.com/djfetamin/fetamin-b2b-sasha-gummy-summer-solstice-festival-2022-thursday-8pm-indie-dance-set'
+  },
+  {
+    title: 'Fetamin b2b Sasha Gummy - What is Techno',
+    genre: 'Acid Techno',
+    trackId: '942253561',
+    link: 'https://soundcloud.com/djfetamin/what-is-techno'
+  },
+  {
+    title: 'Fetamin b2b Sasha Gummy - Raving at 130km/h',
+    genre: 'Techno',
+    trackId: '831700420',
+    link: 'https://soundcloud.com/sashagummy/raving-at-130kmh'
   }
+]
 
+const myOwnMusic: DjSetType[] = [
+  {
+    title: 'Sudden Melt',
+    genre: 'Leftfield House',
+    trackId: '1449227314',
+    link: 'https://soundcloud.com/djfetamin/sudden-melt'
+  }
+]
+
+const PageSectionDjSets = () => {
   return (
     <>
       <PageSection>
         <PageContainer>
-          <SideBySide ref={sectionRef}>
-            <SectionTitle style={titleStyle} ref={titleRef}>
-              DJ sets
-            </SectionTitle>
+          <SideBySide>
+            <SectionTitle>DJ sets</SectionTitle>
 
             <MainContent>
               {djSets.map((djSet) => (
+                <DjSetStyled key={djSet.trackId} {...djSet} />
+              ))}
+            </MainContent>
+          </SideBySide>
+        </PageContainer>
+        <PageContainer>
+          <SideBySide>
+            <SectionTitle>b2b's</SectionTitle>
+
+            <MainContent>
+              {b2bs.map((djSet) => (
+                <DjSetStyled key={djSet.trackId} {...djSet} />
+              ))}
+            </MainContent>
+          </SideBySide>
+        </PageContainer>
+        <PageContainer>
+          <SideBySide>
+            <SectionTitle>My own music</SectionTitle>
+
+            <MainContent>
+              {myOwnMusic.map((djSet) => (
                 <DjSetStyled key={djSet.trackId} {...djSet} />
               ))}
             </MainContent>
@@ -103,7 +127,6 @@ const PageSection = styled.section`
   padding-top: 100vh;
   padding-bottom: 100vh;
   width: 100%;
-  display: flex;
 `
 
 const SectionTitle = styled(motion.h2)`
@@ -112,6 +135,15 @@ const SectionTitle = styled(motion.h2)`
   font-weight: var(--fontWeight-extraBold);
   margin: 0;
   order: 2;
+
+  position: sticky;
+  top: 50%;
+
+  @media ${deviceBreakPoints.ipad} {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    top: 5%;
+  }
 `
 
 const PageContainer = styled(motion.div)`
