@@ -139,6 +139,11 @@ const SectionTitle = styled(motion.h2)`
   position: sticky;
   top: 50%;
 
+  background: linear-gradient(135deg, hsla(0, 0%, 100%, 0) 56%, #ffcaba 98%),
+    linear-gradient(25deg, #f5d1ff 23%, #fff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   @media ${deviceBreakPoints.ipad} {
     writing-mode: vertical-rl;
     text-orientation: mixed;
