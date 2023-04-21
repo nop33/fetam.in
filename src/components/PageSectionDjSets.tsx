@@ -58,13 +58,13 @@ const b2bs: DjSetType[] = [
   },
   {
     title: 'Fetamin b2b Sasha Gummy - What is Techno',
-    genre: 'Acid Techno',
+    genre: 'Techno',
     trackId: '942253561',
     link: 'https://soundcloud.com/djfetamin/what-is-techno'
   },
   {
     title: 'Fetamin b2b Sasha Gummy - Raving at 130km/h',
-    genre: 'Techno',
+    genre: 'Acid Techno',
     trackId: '831700420',
     link: 'https://soundcloud.com/sashagummy/raving-at-130kmh'
   }
