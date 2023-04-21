@@ -1,11 +1,11 @@
-import { ThemeProvider } from 'styled-components'
 import { graphql, PageProps } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
+import PageSectionDjSets from '../components/PageSectionDjSets'
+import PageSectionHero, { PageSectionHeroContentType } from '../components/PageSectionHero'
+import Seo from '../components/Seo'
 import GlobalStyle from '../styles/global-style'
 import { darkTheme } from '../styles/themes'
-
-import Seo from '../components/Seo'
-import PageSectionHero, { PageSectionHeroContentType } from '../components/PageSectionHero'
 
 interface IndexPageProps extends PageProps {
   data: {
@@ -31,6 +31,7 @@ const IndexPage = (props: IndexPageProps) => {
       <main>
         <ThemeProvider theme={darkTheme}>
           <PageSectionHero content={pageContent.headerSection} />
+          <PageSectionDjSets />
         </ThemeProvider>
       </main>
     </>

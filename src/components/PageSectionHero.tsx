@@ -1,10 +1,9 @@
+import { motion } from 'framer-motion'
 import { FC } from 'react'
 import styled, { css, ThemeProvider } from 'styled-components'
 
-import { darkTheme } from '../styles/themes'
 import Logotype from '../images/fetamin-logotype-white.svg'
-
-import { motion } from 'framer-motion'
+import { darkTheme } from '../styles/themes'
 
 export interface PageSectionHeroContentType {
   title: string
@@ -24,7 +23,7 @@ const PageSectionHero: FC<PageSectionHeroProps> = ({ className, content }) => {
           <source src="/videos/fetamin-background.webm" type="video/webm" />
           <source src="/videos/fetamin-background.mp4" type="video/mp4" />
         </BackgroundVideo>
-        <PageContainer>
+        <HeroPageContainer>
           <ContentWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <Contents>
               <a href={content.soundcloud}>
@@ -32,7 +31,7 @@ const PageSectionHero: FC<PageSectionHeroProps> = ({ className, content }) => {
               </a>
             </Contents>
           </ContentWrapper>
-        </PageContainer>
+        </HeroPageContainer>
       </HeroSection>
     </ThemeProvider>
   )
@@ -59,20 +58,23 @@ const Contents = styled.div`
   z-index: 1;
 `
 
-const PageContainer = styled.div`
+const PageContainer = styled(motion.div)`
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-4);
-  position: relative;
+  padding: 0 50px;
   display: flex;
   flex-direction: column;
   flex: 1;
   height: auto;
+`
+
+const HeroPageContainer = styled(PageContainer)`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  max-width: 1000px;
 `
 
 const ContentWrapper = styled(motion.div)`

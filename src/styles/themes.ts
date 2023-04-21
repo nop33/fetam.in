@@ -5,41 +5,33 @@ export type ThemeType = 'light' | 'dark'
 export const darkTheme: DefaultTheme = {
   name: 'dark',
 
-  textPrimary: 'var(--color-white)',
-  textPrimaryVariation: 'var(--color-grey-100)',
-  textSecondary: 'var(--color-grey-200)',
-  textTertiary: 'var(--color-grey-300)',
+  textPrimary: '#fff',
+  textPrimaryVariation: '#fff',
+  textSecondary: '#fff',
+  textTertiary: '#fff',
 
-  bgPrimary: 'var(--color-grey-800)',
-  bgSecondary: 'var(--color-grey-900)',
-  bgTertiary: '#1C1A1A',
-  bgSurface: 'var(--color-grey-700)',
+  bgPrimary: '#000',
+  bgSecondary: '#000',
+  bgTertiary: '#000',
 
-  borderPrimary: 'var(--border-primary-dark)',
+  borderPrimary: 'red',
 
-  link: 'var(--color-grey-100)',
-  linkAlt: 'var(--color-white)',
-
-  separator: 'var(--color-grey-700)'
+  link: 'blue'
 }
 
 export const lightTheme: DefaultTheme = {
   name: 'light',
 
-  textPrimary: 'var(--color-black)',
-  textPrimaryVariation: 'var(--color-grey-600)',
-  textSecondary: 'var(--color-grey-500)',
-  textTertiary: 'var(--color-grey-400)',
+  textPrimary: '#000',
+  textPrimaryVariation: '#000',
+  textSecondary: '#000',
+  textTertiary: '#000',
 
-  bgPrimary: 'var(--color-white)',
-  bgSecondary: 'var(--color-grey)',
-  bgTertiary: 'var(--color-grey)',
-  bgSurface: 'var(--color-white)',
+  bgPrimary: '#fff',
+  bgSecondary: '#fff',
+  bgTertiary: '#fff',
 
-  borderPrimary: 'var(--border-primary-light)',
+  borderPrimary: 'red',
 
-  link: 'var(--color-blue)',
-  linkAlt: 'var(--color-black)',
-
-  separator: 'var(--color-grey-100)'
+  link: 'blue'
 }
