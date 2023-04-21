@@ -8,7 +8,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react/jsx-runtime'
   ],
-  plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks', 'unused-imports', 'simple-import-sort'],
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -20,6 +20,8 @@ module.exports = {
     'no-use-before-define': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'unused-imports/no-unused-imports-ts': 'warn',
+    'simple-import-sort/imports': 'warn',
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
