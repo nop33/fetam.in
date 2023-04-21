@@ -23,15 +23,17 @@ const PageSectionHero: FC<PageSectionHeroProps> = ({ className, content }) => {
           <source src="/videos/fetamin-background.webm" type="video/webm" />
           <source src="/videos/fetamin-background.mp4" type="video/mp4" />
         </BackgroundVideo>
-        <HeroPageContainer>
-          <ContentWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <Contents>
-              <a href={content.soundcloud}>
-                <Image src={Logotype} alt={content.title} />
-              </a>
-            </Contents>
-          </ContentWrapper>
-        </HeroPageContainer>
+        <GradientBackground>
+          <HeroPageContainer>
+            <ContentWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+              <Contents>
+                <a href={content.soundcloud}>
+                  <Image src={Logotype} alt={content.title} />
+                </a>
+              </Contents>
+            </ContentWrapper>
+          </HeroPageContainer>
+        </GradientBackground>
       </HeroSection>
     </ThemeProvider>
   )
@@ -68,13 +70,18 @@ const PageContainer = styled(motion.div)`
   height: auto;
 `
 
-const HeroPageContainer = styled(PageContainer)`
+const GradientBackground = styled.div`
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 5%, rgba(255, 255, 255, 0) 50%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+`
+
+const HeroPageContainer = styled(PageContainer)`
   max-width: 1000px;
+  height: 100%;
 `
 
 const ContentWrapper = styled(motion.div)`
