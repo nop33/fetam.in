@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: fetam.in
+Token: f1aecef94c4b23a7a0226df9cd0bf7155ed04722dcc684894306a077326b7135
