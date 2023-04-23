@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import { deviceBreakPoints } from '../styles/global-style'
 import DjSet, { DjSetType } from './DjSet'
 import ExternalLink from './ExternalLink'
+import Playlist, { PlaylistType } from './Playlist'
 
 const djSets: DjSetType[] = [
   {
@@ -71,6 +72,21 @@ const b2bs: DjSetType[] = [
     genre: 'Acid Techno',
     trackId: '831700420',
     link: 'https://soundcloud.com/sashagummy/raving-at-130kmh'
+  }
+]
+
+const playlists: PlaylistType[] = [
+  {
+    spotifyId: '6fSvDnPA8QouyS8krHmLc9'
+  },
+  {
+    spotifyId: '75E4Ykd3AgNQrXsoyubkCN'
+  },
+  {
+    spotifyId: '0GDLddTnEMGltMQN1RowhA'
+  },
+  {
+    spotifyId: '4qkPbqgXNeLJeA7XwKAUZl'
   }
 ]
 
@@ -162,6 +178,17 @@ const PageSectionDjSets = () => {
             </MainContent>
           </SideBySide>
         </PageContainer>
+        <PageContainer>
+          <SideBySide>
+            <SectionTitle>Playlists</SectionTitle>
+
+            <MainContent>
+              {playlists.map(({ spotifyId }) => (
+                <PlaylistStyled key={spotifyId} spotifyId={spotifyId} />
+              ))}
+            </MainContent>
+          </SideBySide>
+        </PageContainer>
       </PageSection>
     </>
   )
@@ -229,6 +256,7 @@ const SideBySide = styled(motion.div)`
 const MainContent = styled.div`
   order: 1;
   margin: 50vh 0;
+  flex: 1;
 `
 
 const Socials = styled.div``
@@ -246,4 +274,10 @@ const SocialExternalLink = styled(ExternalLink)`
   display: flex;
   gap: 20px;
   padding: 20px 0;
+`
+
+const PlaylistStyled = styled(Playlist)`
+  &:not(:last-child) {
+    margin-bottom: 100vh;
+  }
 `

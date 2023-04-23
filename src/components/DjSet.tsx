@@ -22,11 +22,7 @@ const DjSet = ({ title, genre, trackId, link, className }: DjSetProps) => {
         opacity: 0
       }}
       whileInView={{
-        opacity: 1,
-        transition: {
-          duration: 0.8,
-          type: 'spring'
-        }
+        opacity: 1
       }}
       viewport={{
         once: true,
