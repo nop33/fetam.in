@@ -1,6 +1,7 @@
 import { graphql, PageProps } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 
+import Footer from '../components/Footer'
 import PageSectionDjSets from '../components/PageSectionDjSets'
 import PageSectionHero, { PageSectionHeroContentType } from '../components/PageSectionHero'
 import Seo from '../components/Seo'
@@ -32,6 +33,7 @@ const IndexPage = (props: IndexPageProps) => {
         <ThemeProvider theme={darkTheme}>
           <PageSectionHero content={pageContent.headerSection} />
           <PageSectionDjSets />
+          <Footer />
         </ThemeProvider>
       </main>
     </>

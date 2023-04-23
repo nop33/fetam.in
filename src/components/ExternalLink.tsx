@@ -27,6 +27,7 @@ const ExternalLink: FC<PropsWithChildren<ExternalLinkProps>> = ({ link, classNam
 }
 
 export default styled(ExternalLink)`
+  display: inline-flex;
   text-decoration: none;
   color: inherit;
 `

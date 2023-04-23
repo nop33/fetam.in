@@ -256,7 +256,6 @@ const SideBySide = styled(motion.div)`
 const MainContent = styled.div`
   order: 1;
   margin: 50vh 0;
-  flex: 1;
 `
 
 const Socials = styled.div``
