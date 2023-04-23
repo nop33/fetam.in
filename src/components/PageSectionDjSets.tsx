@@ -77,15 +77,19 @@ const b2bs: DjSetType[] = [
 
 const playlists: PlaylistType[] = [
   {
+    title: 'Everything is Gonna Be Alright',
     spotifyId: '6fSvDnPA8QouyS8krHmLc9'
   },
   {
+    title: 'Dark Mellow Techno',
     spotifyId: '75E4Ykd3AgNQrXsoyubkCN'
   },
   {
+    title: 'Züri Klingt Wie',
     spotifyId: '0GDLddTnEMGltMQN1RowhA'
   },
   {
+    title: 'Tribal Electronica',
     spotifyId: '4qkPbqgXNeLJeA7XwKAUZl'
   }
 ]
@@ -183,8 +187,8 @@ const PageSectionDjSets = () => {
             <SectionTitle>Playlists</SectionTitle>
 
             <MainContent>
-              {playlists.map(({ spotifyId }) => (
-                <PlaylistStyled key={spotifyId} spotifyId={spotifyId} />
+              {playlists.map((playlist) => (
+                <PlaylistStyled key={playlist.spotifyId} {...playlist} />
               ))}
             </MainContent>
           </SideBySide>
@@ -208,6 +212,8 @@ const SectionTitle = styled(motion.h2)`
   font-weight: var(--fontWeight-extraBold);
   margin: 0;
   order: 2;
+
+  line-height: 1;
 
   position: sticky;
   top: 50%;
@@ -236,7 +242,7 @@ const PageContainer = styled(motion.div)`
   height: auto;
 
   @media ${deviceBreakPoints.ipad} {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 `
 
@@ -250,7 +256,7 @@ const SideBySide = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 30px;
 `
 
 const MainContent = styled.div`
