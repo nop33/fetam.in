@@ -34,16 +34,7 @@ const DjSet = ({ title, genre, trackId, link, className }: DjSetProps) => {
       }}
     >
       <ExternalLink link={link}>
-        <Title
-          whileHover={{ scale: 1.03 }}
-          transition={{
-            type: 'spring',
-            stiffness: 300,
-            damping: 10
-          }}
-        >
-          {title}
-        </Title>
+        <Title>{title}</Title>
       </ExternalLink>
       <Genre>{genre}</Genre>
       <SoundCloudFrame

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { FC, PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
@@ -8,9 +9,20 @@ interface ExternalLinkProps {
 
 const ExternalLink: FC<PropsWithChildren<ExternalLinkProps>> = ({ link, className, children }) => {
   return (
-    <a href={link} target="_blank" className={className} rel="noreferrer">
+    <motion.a
+      href={link}
+      target="_blank"
+      className={className}
+      rel="noreferrer"
+      whileHover={{ scale: 1.03 }}
+      transition={{
+        type: 'spring',
+        stiffness: 300,
+        damping: 10
+      }}
+    >
       {children}
-    </a>
+    </motion.a>
   )
 }
 

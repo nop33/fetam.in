@@ -1,8 +1,12 @@
+import { faInstagram, faSoundcloud, faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 import { deviceBreakPoints } from '../styles/global-style'
 import DjSet, { DjSetType } from './DjSet'
+import ExternalLink from './ExternalLink'
 
 const djSets: DjSetType[] = [
   {
@@ -83,6 +87,48 @@ const PageSectionDjSets = () => {
   return (
     <>
       <PageSection>
+        <PageContainer>
+          <SideBySide>
+            <SectionTitle>Socials</SectionTitle>
+
+            <MainContent>
+              <Socials>
+                <Social>
+                  <SocialExternalLink link="https://soundcloud.com/djfetamin">
+                    <Icon>
+                      <FontAwesomeIcon icon={faSoundcloud} />
+                    </Icon>
+                    SoundCloud
+                  </SocialExternalLink>
+                </Social>
+                <Social>
+                  <SocialExternalLink link="https://open.spotify.com/user/11101912794">
+                    <Icon>
+                      <FontAwesomeIcon icon={faSpotify} />
+                    </Icon>
+                    Spotify
+                  </SocialExternalLink>
+                </Social>
+                <Social>
+                  <SocialExternalLink link="https://instagram.com/dj.fetamin">
+                    <Icon>
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </Icon>
+                    Instagram
+                  </SocialExternalLink>
+                </Social>
+                <Social>
+                  <SocialExternalLink link="mailto:book@fetam.in">
+                    <Icon>
+                      <FontAwesomeIcon icon={faEnvelope} />
+                    </Icon>
+                    Bookings
+                  </SocialExternalLink>
+                </Social>
+              </Socials>
+            </MainContent>
+          </SideBySide>
+        </PageContainer>
         <PageContainer>
           <SideBySide>
             <SectionTitle>DJ sets</SectionTitle>
@@ -183,4 +229,21 @@ const SideBySide = styled(motion.div)`
 const MainContent = styled.div`
   order: 1;
   margin: 50vh 0;
+`
+
+const Socials = styled.div``
+
+const Social = styled.div`
+  font-size: 40px;
+  font-weight: var(--fontWeight-bold);
+`
+
+const Icon = styled.div`
+  width: 45px;
+`
+
+const SocialExternalLink = styled(ExternalLink)`
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
 `
