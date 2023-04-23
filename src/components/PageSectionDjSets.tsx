@@ -77,7 +77,7 @@ const b2bs: DjSetType[] = [
 
 const playlists: PlaylistType[] = [
   {
-    title: 'Everything is Gonna Be Alright',
+    title: 'Everything Will Be Alright',
     spotifyId: '6fSvDnPA8QouyS8krHmLc9'
   },
   {
