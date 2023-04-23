@@ -263,10 +263,18 @@ const Socials = styled.div``
 const Social = styled.div`
   font-size: 40px;
   font-weight: var(--fontWeight-bold);
+
+  @media ${deviceBreakPoints.ipad} {
+    font-size: 30px;
+  }
 `
 
 const Icon = styled.div`
   width: 45px;
+
+  @media ${deviceBreakPoints.ipad} {
+    width: 30px;
+  }
 `
 
 const SocialExternalLink = styled(ExternalLink)`
