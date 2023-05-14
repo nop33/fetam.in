@@ -11,16 +11,22 @@ import Playlist, { PlaylistType } from './Playlist'
 
 const djSets: DjSetType[] = [
   {
-    title: 'Studio Sessions 007 - Everybody Loves the Sunshine',
+    title: '@Subset, Club Variété - Debut in Zürich 12.05.2023',
     genre: 'Drum & Bass',
-    trackId: '1440337441',
-    link: 'https://soundcloud.com/djfetamin/studio-sessions-007-everybody-loves-the-sunshine'
+    trackId: '1513990390',
+    link: 'https://soundcloud.com/djfetamin/dj-set-subset-club-variete-zurich-12052023'
   },
   {
     title: 'Summer Solstice Festival 2022, Saturday 1am',
     genre: 'Hard Techno',
     trackId: '1290998587',
     link: 'https://soundcloud.com/djfetamin/summer-solstice-festival-2022-saturday-1am-fetamin-hard-techno-set'
+  },
+  {
+    title: 'Studio Sessions 007 - Everybody Loves the Sunshine',
+    genre: 'Drum & Bass',
+    trackId: '1440337441',
+    link: 'https://soundcloud.com/djfetamin/studio-sessions-007-everybody-loves-the-sunshine'
   },
   {
     title: 'Studio Sessions 006 - A Series of Questions',
